@@ -18,3 +18,16 @@ Iteration 1: MPV - Spaces and dates are hardcoded
 
 #### DATABASE SETUP
 
+To Set Up the Database:
+-----------------
+Open the terminal.
+Run `psql`
+`CREATE DATABASE makers_bnb;`
+Run the commands in the db/migrations folder, in order.
+
+To Set Up the Test Database:
+-----------------
+Open the terminal.
+Run `psql`
+`CREATE DATABASE makers_bnb;`
+Run the commands in the db/migrations folder, in order.
