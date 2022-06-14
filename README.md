@@ -31,5 +31,5 @@ To Set Up the Test Database:
 Open the terminal. \
 Enter `psql` \
 Create the test database using `CREATE DATABASE makers_bnb_test;` \
-Connect to the database using `\c makers_bnb_test;`
+Connect to the database using `\c makers_bnb_test;` \
 Run the commands in the db/migrations folder, in order.
