@@ -15,6 +15,17 @@ Iteration 1: MPV - Spaces and dates are hardcoded
 
 ### USER STORIES
 
+* [MVP3]
+As a renter So that I can choose a place to stay I need to see available spaces with a name, description and price.
+
+TDD steps: 
+
+- return a list of spaces (description, name, price) [HARDCODED: single space, with fixed dates] to the index.erb file [capybara]
+
+- MVC refactor: move the list of spaces (be it one or more) away from the views and controller, and into the model (step 1), and then database (step 2).[rspec]
+
+- Adapt the views and controller to take the data from the model and present them to the views in html, via controller. [capybara]
+
 
 #### DATABASE SETUP
 
