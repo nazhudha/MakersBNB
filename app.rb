@@ -7,7 +7,7 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/' do
-    'Welcome to MakersBNB, the place to rent properties'
+    erb :main
   end
 
   get '/space' do 
