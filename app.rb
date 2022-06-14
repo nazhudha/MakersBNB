@@ -6,6 +6,8 @@ class MakersBNB < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  enable :sessions
+
   get '/' do
     erb :main
   end
@@ -14,9 +16,21 @@ class MakersBNB < Sinatra::Base
     erb :spaces
   end 
 
-  get '/space/request' do 
+  get '/space/requests' do 
     erb :requests
   end 
   
+  post '/space/requests' do 
+    session[:approved_message] = "Your booking has now been approved"
+    redirect '/space/approved'
+  end
+
+  get '/space/approved' do 
+    @approved_message = session[:approved_message]
+    erb :requests
+  end
+  
+  
+
   run! if app_file == $0
 end

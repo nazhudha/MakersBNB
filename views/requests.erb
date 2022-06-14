@@ -1,11 +1,21 @@
-<a href="/">Main Page</a>
-<a href="/space">Spaces</a>
-<a href="/space/request">Requests</a>
+<a href="/">Main </a>
+<a href="/space">Spaces </a>
+<a href="/space/requests">Requests </a>
 
 <h1>Request Page</h1>
-<h3>Your booking is now confirmed</h3>
+<h3>Your booking is now confirmed</h3><br>
+
+<% if @approved_message %>
+<h3> <%= @approved_message %></h3>
+<% end %>
 
 
-<form action="/" method="get">
+
+<%# <form action="/" method="get">
+<button type="submit" name="ok">Ok</button>
+</form> %>
+
+<form action="/space/requests" method="post">
 <button type="submit" name="ok">Ok</button>
 </form>
+
