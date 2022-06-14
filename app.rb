@@ -6,8 +6,12 @@ class MakersBNB < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  get '/' do
-    'Welcome to MakersBNB, the place to rent properties'
+  get '/' do    
+    erb :index
+  end
+
+  get '/spaces' do
+    erb :spaces
   end
   
   run! if app_file == $0

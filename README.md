@@ -20,7 +20,9 @@ As a renter So that I can choose a place to stay I need to see available spaces 
 
 TDD steps: 
 
-- return a list of spaces (description, name, price) [HARDCODED: single space, with fixed dates] to the index.erb file [capybara]
+- view_index_spec.rb in /features (connection test) [rspec] => PASSED
+
+- return a list of spaces (description, name, price) [HARDCODED: single space, with fixed dates] to the index.erb file [capybara] => PASSED
 
 - MVC refactor: move the list of spaces (be it one or more) away from the views and controller, and into the model (step 1), and then database (step 2).[rspec]
 
