@@ -12,7 +12,12 @@ class Space
     spaces = [{
       name: 'Happy House',
       description: 'A really cosy space, where you can relax', 
-      price: '24$/night'}
+      price: '24$/night'},
+      {
+        name: 'Buckingham Palace',
+        description: 'The biggest house in the world',
+        price: 'mil$/night'
+      }
     ]
     spaces.map { |space|
       Space.new(name: space[:name], 
