@@ -1,1 +1,8 @@
-'Name: Happy House, Description: A really cosy space, where you can relax, Price: 24$/night'
+<%# 'Name: Happy House, Description: A really cosy space, where you can relax, Price: 24$/night' %>
+<ul>
+  <% @spaces.each do |space| %>
+     <li>Name: <%= space.name %>, </li>
+     <li>Description: <%= space.description %>, </li>
+     <li>Price: <%= space.price %></li>
+  <% end %>
+<ul>

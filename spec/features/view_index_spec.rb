@@ -1,4 +1,4 @@
-feature "Check basic server connection" do
+feature "Viewing spaces" do
   scenario "Returns a known message showing connection established" do
     visit('/')
     expect(page).to have_content('Welcome to MakersBNB, the place to rent properties')
@@ -8,4 +8,6 @@ feature "Check basic server connection" do
     visit('/spaces')
     expect(page).to have_content('Name: Happy House, Description: A really cosy space, where you can relax, Price: 24$/night')
   end
+
+  
 end
