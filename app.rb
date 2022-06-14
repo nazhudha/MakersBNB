@@ -7,13 +7,13 @@ class MakersBNB < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  get '/' do    
-    erb :index
+  get '/makersbnb' do    
+    erb :'/makersbnb/index'
   end
 
-  get '/spaces' do
+  get '/makersbnb/spaces' do
     @spaces = Space.all
-    erb :spaces
+    erb :'/makersbnb/spaces'
   end
   
   run! if app_file == $0
