@@ -1,3 +1,10 @@
+# Group Collabrators 
+* Naz
+* Kay
+* Aisha
+* Amir
+* Ben
+
 # Headline specifications
 
 * Any signed-up user can list a new space.
@@ -15,6 +22,19 @@ Iteration 1: MPV - Spaces and dates are hardcoded
 
 ### USER STORIES
 
+* [MVP1]
+`As a renter\ So that I can choose a place to stay\ I need to see available spaces with a name, description and price.`
+
+TDD steps: 
+
+- view_index_spec.rb in /features (connection test) [rspec] => PASSED
+
+- return a space (description, name, price) [HARDCODED: single space, with fixed dates] to the index.erb file [capybara] => PASSED
+
+-  Adapt the views and controller to take the data from the model and present them to the views in html, via controller. [capybara] => PASSED
+
+- MVC refactor: move the list of spaces (be it one or more) away from the views and controller, and into the model (step 1) => PASSED
+  and then database (step 2).[rspec] => PENDING
 
 #### DATABASE SETUP
 
