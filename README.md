@@ -22,7 +22,7 @@ Iteration 1: MPV - Spaces and dates are hardcoded
 
 ### USER STORIES
 
-* [MVP3]
+* [MVP1]
 `As a renter\ So that I can choose a place to stay\ I need to see available spaces with a name, description and price.`
 
 TDD steps: 
