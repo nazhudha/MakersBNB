@@ -1,3 +1,10 @@
+# Group Collabrators 
+* Naz
+* Kay
+* Aisha
+* Amir
+* Ben
+
 # Headline specifications
 
 * Any signed-up user can list a new space.

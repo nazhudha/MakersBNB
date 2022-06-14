@@ -1,0 +1,20 @@
+<a href="/makersbnb">Main </a>
+<a href="/makersbnb/space">Spaces </a>
+<a href="/makersbnb/requests">Requests </a>
+
+<h1>Request Page</h1>
+<h3>Your booking is now confirmed</h3><br>
+
+<% if @approved_message %>
+<h3> <%= @approved_message %></h3>
+<% end %>
+
+
+<%# <form action="/" method="get">
+<button type="submit" name="ok">Ok</button>
+</form> %>
+
+<form action="/makersbnb/requests" method="post">
+<button type="submit" name="ok">Ok</button>
+</form>
+

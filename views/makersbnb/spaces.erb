@@ -1,3 +1,8 @@
+<a href="/makersbnb">Main </a>
+<a href="/makersbnb/spaces">Spaces </a>
+<a href="/makersbnb/requests">Requests </a>
+
+
 <%# 'Name: Happy House, Description: A really cosy space, where you can relax, Price: 24$/night' %>
 <ul style="list-style: none;">
   <% @spaces.each do |space| %>
@@ -6,3 +11,10 @@
      <li>Price: <%= space.price %></li><br>
   <% end %>
 <ul>
+
+<%# Request to Book button  %>
+
+<%# (This will need to be for each iteration of a space) %>
+<form action="/makersbnb/requests" method="get">
+<button type="submit" name="request">Request to Book</button>
+</form>
