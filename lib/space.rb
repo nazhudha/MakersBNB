@@ -20,10 +20,17 @@ class Space
       }
     ]
     spaces.map { |space|
-      Space.new(name: space[:name], 
+      Space.new(name: space[:name],
         description: space[:description], 
         price: space[:price])
     }
   end
 
+  def self.add(name)
+     @name = name
+  end
+
+  def self.names
+    @name
+  end
 end

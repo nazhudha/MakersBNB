@@ -17,6 +17,18 @@ class MakersBNB < Sinatra::Base
     erb :'/makersbnb/spaces'
   end
 
+  get '/makersbnb/add' do
+    erb(:'makersbnb/add')
+  end
+
+  post '/makersbnb/add' do
+    redirect ('/makersbnb/add_confirmation')
+  end
+
+  get '/makersbnb/add_confirmation' do
+    erb(:'makersbnb/add_confirmation')
+  end
+
   get '/makersbnb/requests' do 
     erb :'/makersbnb/requests'
   end 
