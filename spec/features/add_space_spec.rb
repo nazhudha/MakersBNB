@@ -37,7 +37,7 @@ feature 'add a space' do
     visit '/makersbnb/add'
     fill_in 'Name', with: 'The Moon'
     click_on 'Submit'
-    visit '/makersbnb/spaces'
+    click_on 'view all spaces'
     expect(page).to have_content 'The Moon'
   end
 
