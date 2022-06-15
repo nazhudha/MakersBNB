@@ -12,7 +12,9 @@
   <% end %>
 <ul>
 
-<h2><%=Space.names %></h2>
+<h2><% Space.names.each do |name| %></h2>
+  <li>Name: <%= name %>
+  <% end %> 
 
 <%# Request to Book button  %>
 
