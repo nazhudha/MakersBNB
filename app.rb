@@ -22,7 +22,7 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/makersbnb/add' do
-    Space.add(params[:Name])
+    Space.add(params[:Name], params[:Description])
     redirect ('/makersbnb/add_confirmation')
   end
 
