@@ -27,6 +27,7 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/makersbnb/add_confirmation' do
+    @space = Space.show_most_recent_space
     erb(:'makersbnb/add_confirmation')
   end
 
