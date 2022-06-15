@@ -41,5 +41,4 @@ feature 'add a space' do
     expect(page).to have_content 'The Moon'
   end
 
-
 end
