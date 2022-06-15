@@ -1,5 +1,5 @@
 class Space
-  
+  # there are no unit tests for this class
   attr_reader :name, :description, :price
 
   def initialize (name:, description:, price:)
@@ -27,4 +27,3 @@ class Space
   end
 
 end
-

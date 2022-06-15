@@ -3,12 +3,11 @@
 <a href="/makersbnb/requests">Requests </a>
 
 <h1>Request Page</h1>
-<h3>Your booking is now confirmed</h3><br>
+<h3>Your booking request is now confirmed</h3><br>
 
 <% if @approved_message %>
 <h3> <%= @approved_message %></h3>
 <% end %>
-
 
 <%# <form action="/" method="get">
 <button type="submit" name="ok">Ok</button>
@@ -17,4 +16,3 @@
 <form action="/makersbnb/requests" method="post">
 <button type="submit" name="ok">Ok</button>
 </form>
-

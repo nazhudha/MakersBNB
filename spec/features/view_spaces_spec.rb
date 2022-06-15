@@ -11,4 +11,5 @@ feature "Viewing spaces" do
   end
 
   # need a test that begins from the homepage
+  # need a separate test for the menu
 end
