@@ -1,3 +1,5 @@
+require 'pg'
+
 class Space
   
   attr_reader :name, :description, :price
@@ -9,6 +11,10 @@ class Space
   end
 
   def self.all
+
+    # connection = PG.connect(dbname: "makers_bnb")
+    # result = connection.exec("SELECT * FROM spaces;")
+    
     spaces = [{
       name: 'Happy House',
       description: 'A really cosy space, where you can relax', 
