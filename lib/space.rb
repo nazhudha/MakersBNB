@@ -33,10 +33,16 @@ class Space
      @connection.exec ("INSERT INTO spaces (name) VALUES ('#{space_name}');")
   end
 
-  def self.names
+  def self.show_most_recent_space
     Space.choose_database
     table = @connection.exec ("SELECT * FROM spaces;")
     table.map {|row| row['name']}.last
+  end
+
+  def self.names
+    Space.choose_database
+    table = @connection.exec ("SELECT * FROM spaces;")
+    table.map {|row| row['name']}
   end
 
   def self.choose_database
