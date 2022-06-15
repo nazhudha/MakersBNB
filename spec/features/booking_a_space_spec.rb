@@ -8,10 +8,9 @@ feature "Booking a space" do
 
   context "After a user has booked a space" do 
     scenario "User recieves an automatic approval message" do 
-    visit('/makersbnb/approved')
-    click_button('Ok')
-    expect(page).to have_content "Your booking has now been approved"
+      visit('/makersbnb/approved')
+      click_button('Ok')
+      expect(page).to have_content "Your booking has now been approved"
+    end 
   end 
-end 
-  # needs more tests to cover the full functionality of making a booking request
 end 
