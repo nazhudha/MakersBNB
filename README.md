@@ -1,3 +1,10 @@
+# Notes/updates during development
+
+* MVP1 has been merged into main
+* feature1_book_space has been merged into MVP1
+* These are currently obsolete
+* Created a new branch db_integration
+
 # Group Collabrators 
 * Naz
 * Kay
