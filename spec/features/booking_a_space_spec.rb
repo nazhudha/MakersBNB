@@ -4,4 +4,6 @@ feature "Booking a space" do
     click_button('requests')
     expect(page).to have_content "Your booking is now confirmed"
   end 
+
+  # needs more tests to cover the full functionality of making a booking request
 end 
