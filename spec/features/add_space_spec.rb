@@ -16,7 +16,7 @@ feature 'add a space' do
       expect(page).to have_content "Description: It's pretty rocky!"
   end
 
-  xscenario 'it adds a name of a space and shows confirmation' do
+  scenario 'it adds a name and description of a different space and shows confirmation' do
     visit '/makersbnb/add'
       fill_in 'Name', with: 'Buckingham Palace'
       click_on 'Submit'
