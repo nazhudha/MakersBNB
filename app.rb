@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
-require_relative './lib/space.rb'
+require_relative './lib/space'
 
 class MakersBNB < Sinatra::Base
   configure :development do
