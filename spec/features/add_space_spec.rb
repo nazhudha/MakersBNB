@@ -50,13 +50,20 @@ feature 'add a space' do
     expect(page).to have_content "Description: It's pretty rocky!"
   end
 
-  xscenario 'it adds multiple space names to the spaces view page' do
+  scenario 'it adds multiple space names and descriptions to the spaces view page' do
     visit '/makersbnb/add'
     fill_in 'Name', with: 'The Moon'
+    fill_in 'Description', with: "It's pretty rocky!"
     click_on 'Submit'
-    visit '/makersbnb/add'
-    fill_in 'Name', with: 'Under The Sea'
+    click_on 'Add another space'
+    fill_in 'Name', with: 'Buckingham Palace'
+    fill_in 'Description', with: "This place is very fancy"
     click_on 'Submit'
+    click_on 'view all spaces'
+    expect(page).to have_content 'Name: The Moon'
+    expect(page).to have_content "Description: It's pretty rocky!"
+    expect(page).to have_content 'Name: Buckingham Palace'
+    expect(page).to have_content "Description: This place is very fancy"
   end
 
   scenario 'you can reach the page from the homepage' do
