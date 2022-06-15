@@ -32,10 +32,12 @@ feature 'add a space' do
     click_on 'Submit'
     click_on 'Add another space'
     fill_in 'Name', with: 'The Moon'
+    fill_in 'Description', with: "It's pretty rocky!"
     click_on 'Submit'
     expect(page).to have_content 'Here is a confirmation of your new space details:'
     expect(page).not_to have_content 'Name: Buckingham Palace'
     expect(page).to have_content 'Name: The Moon'
+    expect(page).to have_content "Description: It's pretty rocky!"
   end
 
   xscenario 'it adds the space name to the spaces view page' do
