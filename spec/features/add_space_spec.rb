@@ -19,12 +19,14 @@ feature 'add a space' do
   scenario 'it adds a name and description of a different space and shows confirmation' do
     visit '/makersbnb/add'
       fill_in 'Name', with: 'Buckingham Palace'
+      fill_in 'Description', with: "This place is very fancy"
       click_on 'Submit'
       expect(page).to have_content 'Here is a confirmation of your new space details:'
       expect(page).to have_content 'Name: Buckingham Palace'
+      expect(page).to have_content 'Description: This place is very fancy'
   end
 
-  xscenario 'it adds the name of two spaces and shows confirmation of each separately' do
+  scenario 'it adds the name and description of two spaces and shows confirmation of each separately' do
     visit '/makersbnb/add'
     fill_in 'Name', with: 'Buckingham Palace'
     click_on 'Submit'
