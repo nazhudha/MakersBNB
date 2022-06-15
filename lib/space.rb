@@ -28,21 +28,22 @@ class Space
     }
   end
 
-  def self.add(space_name)
+  def self.add(space_name, description)
      Space.choose_database
-     @connection.exec ("INSERT INTO spaces (name) VALUES ('#{space_name}');")
+     description = Space.double_apostrophe(description)
+     @connection.exec ("INSERT INTO spaces (name, description) VALUES ('#{space_name}', '#{description}');")
   end
 
   def self.show_most_recent_space
     Space.choose_database
     table = @connection.exec ("SELECT * FROM spaces;")
-    table.map {|row| row['name']}.last
+    table.map {|row| row.values_at('name', 'description')}.last
   end
 
   def self.names
     Space.choose_database
     table = @connection.exec ("SELECT * FROM spaces;")
-    table.map {|row| row['name']}
+    table.map {|row| row.values_at('name')}
   end
 
   def self.choose_database
@@ -52,4 +53,15 @@ class Space
       @connection = PG.connect(dbname: 'makers_bnb')
     end
   end
+
+  def self.double_apostrophe(description)
+    chars = description.chars
+    new_chars = []
+    chars.each do |char|
+      char = "''" if char == "'"
+      new_chars << char
+    end
+    new_chars.join
+  end
+
 end
