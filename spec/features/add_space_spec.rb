@@ -50,4 +50,10 @@ feature 'add a space' do
     click_on 'Submit'
   end
 
+  scenario 'you can reach the page from the homepage' do
+    visit '/makersbnb'
+    click_on 'Add a space'
+    expect(page).to have_content 'Add your space!'
+  end
+
 end
