@@ -1,3 +1,5 @@
+require 'pg'
+
 class Space
   # there are no unit tests for this class
   attr_reader :name, :description, :price
@@ -26,11 +28,22 @@ class Space
     }
   end
 
-  def self.add(name)
-     @name = name
+  def self.add(space_name)
+     Space.choose_database
+     @connection.exec ("INSERT INTO spaces (name) VALUES ('#{space_name}');")
   end
 
   def self.names
-    @name
+    Space.choose_database
+    table = @connection.exec ("SELECT * FROM spaces;")
+    table.map {|row| row['name']}.last
+  end
+
+  def self.choose_database
+    if ENV['RACK_ENV'] = 'test'
+      @connection = PG.connect(dbname: 'makers_bnb_test')
+    else
+      @connection = PG.connect(dbname: 'makers_bnb')
+    end
   end
 end

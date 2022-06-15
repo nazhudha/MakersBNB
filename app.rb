@@ -27,7 +27,6 @@ class MakersBNB < Sinatra::Base
   end
 
   get '/makersbnb/add_confirmation' do
-    # @space = Space.add(name)
     erb(:'makersbnb/add_confirmation')
   end
 
