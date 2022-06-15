@@ -22,10 +22,12 @@ class MakersBNB < Sinatra::Base
   end
 
   post '/makersbnb/add' do
+    Space.add(params[:Name])
     redirect ('/makersbnb/add_confirmation')
   end
 
   get '/makersbnb/add_confirmation' do
+    # @space = Space.add(name)
     erb(:'makersbnb/add_confirmation')
   end
 
