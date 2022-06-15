@@ -1,9 +1,10 @@
 # Group Collabrators 
-* Naz
-* Kay
-* Aisha
-* Amir
-* Ben
+
+- [Ben](https://github.com/BenjaminNeustadt)
+- [Kay](https://github.com/kaykakaraka)
+- [Aisha](https://github.com/Aisha-Yusuff)
+- [Amir](https://github.com/ak2022dev)
+- [Naz H](https://github.com/nazhudha)
 
 # Headline specifications
 
@@ -37,4 +38,21 @@ TDD steps:
   and then database (step 2).[rspec] => PENDING
 
 #### DATABASE SETUP
+
+To Set Up the Database:
+-----------------
+Open the terminal. \
+Enter `psql` \
+Create the database using `CREATE DATABASE makers_bnb;` \
+Connect to the database using `\c makers_bnb;` \
+Run the commands in the db/migrations folder, in order.
+
+To Set Up the Test Database:
+-----------------
+Open the terminal. \
+Enter `psql` \
+Create the test database using `CREATE DATABASE makers_bnb_test;` \
+Connect to the database using `\c makers_bnb_test;` \
+Run the commands in the db/migrations folder, in order.
+
 
