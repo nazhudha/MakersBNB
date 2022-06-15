@@ -33,11 +33,13 @@ feature 'add a space' do
     expect(page).to have_content 'Name: The Moon'
   end
 
-  xscenario 'it adds the space name to the spaces view page' do
+  scenario 'it adds the space name to the spaces view page' do
     visit '/makersbnb/add'
     fill_in 'Name', with: 'The Moon'
     click_on 'Submit'
     visit '/makersbnb/spaces'
     expect(page).to have_content 'The Moon'
   end
+
+
 end
