@@ -4,23 +4,35 @@ body {
 
 section {
   /* background-color: white; */
+}
 
+/* MAIN HERO SECTION ---------->>>>>>>>>>>*/
+
+.hero-section {
+  height: 100vh;
+  /* background-color: white; */
+  font-size: 40px;
+}
+
+#main{
+  background-image: url('https://i.insider.com/5d6799566f24eb5bb9563b03?width=1000&format=jpeg&auto=webp');
+  background-repeat: no-repeat;    
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-section {
   height: 100vh;
   /* background-color: white; */
   font-size: 40px;
-  /* background-image: url('../assets/Hero_image.jpeg');
   background-repeat: no-repeat;    
   background-size: cover;
-  background-position: center; */
+  background-position: center;
 }
 
-.hero-section li a,  a {
+.hero-section li a, a {
   text-decoration: none ;
   color: white;
-  
 }
 
 p {
@@ -29,16 +41,40 @@ p {
   font-weight: 300;
 }
 
+.hero-area {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
 
-/* MAIN HERO SECTION ---------->>>>>>>>>>>*/
+.hero-text {
+  margin-left: 80px;
+  margin-bottom: 200px;
+  position: relative;
+  left: -0.9em;
+}
 
+h1 {
+  font-size: 5rem;
+  margin: 0px;
+  color: #FFFFFF;
+}
+
+.hero-text p {
+  font-size: 1.8rem;
+  color: #FFFFFF;
+}
+
+
+/* NAV BAR  ---------->>>>>>>>>>>*/
 nav {
   display: flex;
   justify-content: flex-end;
   /* position: fixed; */
   height: 50px;
   width: 100%;
-  background-color: #5C0000;
+  background-color: #000000;
   /* box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205); */
   z-index: 999;
   transition: background 1s ease;
@@ -62,7 +98,7 @@ nav {
   border-radius: 100px;
 }
 
-/* buttons */
+/* LOGGING IN BUTTONS */
 #login-signup-container {
   display: flex;
   justify-content: flex-start;
@@ -79,6 +115,7 @@ nav {
   font-weight: 300;
   padding-top: 5px;
   margin-top: 20px;
+  color: black;
 }
 #signup-btn {
   width: 150px;
@@ -91,37 +128,13 @@ nav {
   font-weight: 300;
   padding-top: 5px;
   margin-top: 20px;
-}
-
-.hero-area {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  align-items: center;
-}
-
-.hero-text {
-  margin-left: 80px;
-  margin-bottom: 200px;
-  position: relative;
-  left: -0.9em;
-}
-
-h1 {
-  font-size: 5rem;
-  margin: 0px;
-  color: #2F4858;
-}
-
-.hero-text p {
-  font-size: 1.8rem;
-  color: #2F4858;
+  color: black;
 }
 
 
-/* SPACES AND REQUESTS */
+/* SPACES AND REQUESTS PAGES ---------->>>>>>>>>>> */
 #form-container {
-  background-color: #ffe6e6;
+  background-color: #F2F2F2;
   display: flex;
   flex-direction: column;
   margin: 3rem auto auto;
@@ -135,5 +148,38 @@ h1 {
 
 #space-list li {
   text-decoration: none;
+  display: block;
+}
 
+/* OTHER add Hoc */
+.title-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.button {
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #DF7241;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-top: 5px;
+  margin-top: 20px;
+}
+
+.button:hover, .socials svg:hover, nav ul li:hover{
+  /* background-color: #f0774e; */
+  cursor: pointer;
+  border-color: #F9F871;
+  color: white;
+  box-shadow: 0 0.7em 1em -0.5em #F9F871;
+  transform: translateY(0.1em);
+}
+
+.button:active {
+  background-color: #A9a9a9;
+  color: #808080;
 }

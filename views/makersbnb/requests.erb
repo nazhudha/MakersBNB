@@ -14,12 +14,15 @@
     </nav>  
 <div>
 
-<div id='form-container'>
-    <p>My Requests</p>
+<div class="title-container">
+<h2>My Requests</h2>
+</div>
+
+<div id='form-container' >
 <p>Your booking request is now confirmed</p><br>
 
 <% if @approved_message %>
-<p3> <%= @approved_message %></p3>
+<p> <%= @approved_message %></p>
 <% end %>
 
 <%# <form action="/" method="get">
