@@ -1,45 +1,36 @@
 require 'pg'
+require './lib/database_connection'
 
 class Space
   # there are no unit tests for this class
-  attr_reader :name, :description, :price
+#   attr_reader :name, :description, :price
 
-  def initialize (name:, description:, price:)
-    @name = name
-    @description = description
-    @price = price
-  end
+#   def initialize (name:, description:, price:)
+#     @name = name
+#     @description = description
+#     @price = price
+#   end
+
 
   def self.all
-    Space.choose_database
-    table = @connection.exec ("SELECT * FROM spaces;")
-    table.map {|row| row.values_at('name', 'description')}
+    spaces = DatabaseConnection.query("SELECT * FROM spaces")
+    spaces.map { |row| row.values_at('name', 'description', 'price_per_night')}
   end
 
   def self.add(space_name, description)
-     Space.choose_database
+     space_name = Space.double_apostrophe(space_name)
      description = Space.double_apostrophe(description)
-     @connection.exec ("INSERT INTO spaces (name, description) VALUES ('#{space_name}', '#{description}');")
+     DatabaseConnection.query("INSERT INTO spaces (name, description) VALUES ('#{space_name}', '#{description}');")
   end
 
   def self.show_most_recent_space
-    Space.choose_database
-    table = @connection.exec ("SELECT * FROM spaces;")
+    table = DatabaseConnection.query("SELECT * FROM spaces;")
     table.map {|row| row.values_at('name', 'description')}.last
   end
 
   def self.names
-    Space.choose_database
-    table = @connection.exec ("SELECT * FROM spaces;")
+    table = DatabaseConnection.query("SELECT * FROM spaces;")
     table.map {|row| row.values_at('name')}
-  end
-
-  def self.choose_database
-    if ENV['RACK_ENV'] = 'test'
-      @connection = PG.connect(dbname: 'makers_bnb_test')
-    else
-      @connection = PG.connect(dbname: 'makers_bnb')
-    end
   end
 
   # method below needed as otherwise the SQL does not process any apostrophes
