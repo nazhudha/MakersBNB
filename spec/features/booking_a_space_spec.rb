@@ -7,7 +7,7 @@ feature "Booking a space" do
   end 
 
   context "After a user has booked a space" do 
-    scenario "User recieves an automatic approval message" do 
+    scenario "User receives an automatic approval message" do 
       visit('/makersbnb/approved')
       click_button('Ok')
       expect(page).to have_content "Your booking has now been approved"
