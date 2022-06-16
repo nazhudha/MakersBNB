@@ -17,7 +17,8 @@
 
 <%# 'Name: Happy House, Description: A really cosy space, where you can relax, Price: 24$/night' %>
 
-<ul style="list-style: none;">
+<div id='form-container'>
+<ul style="list-style: none;" id="space-list">
   <% @spaces.each do |space| %>
      <li>Name: <%= space.name %>, </li>
      <li>Description: <%= space.description %>, </li>
@@ -27,6 +28,7 @@
 </form>
   <% end %>
 <ul>
+</div>
 
 </section>
 
