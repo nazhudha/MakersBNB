@@ -1,12 +1,19 @@
 feature "Booking a space" do 
-  scenario "when a user wants to book a space" do 
+  scenario "User can book a space and receives a confirmation" do 
     visit '/makersbnb/add'
     fill_in 'Name', with: 'Buckingham Palace'
     click_on 'Submit'
     visit('/makersbnb/spaces')
-    click_button('requests')
+    # test clicking the first requests button and not all the requests buttons 
+    click_button('requests', match: :first) 
     expect(page).to have_content "Your booking request is now confirmed"
   end 
 
-  # needs more tests to cover the full functionality of making a booking request
+  context "After a user has booked a space" do 
+    scenario "User receives an automatic approval message" do 
+      visit('/makersbnb/approved')
+      click_button('Ok')
+      expect(page).to have_content "Your booking has now been approved"
+    end 
+  end 
 end 

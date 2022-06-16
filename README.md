@@ -1,3 +1,10 @@
+# Notes/updates during development
+
+* MVP1 has been merged into main
+* feature1_book_space has been merged into MVP1
+* These are currently obsolete
+* Created a new branch db_integration
+
 # Group Collabrators 
 
 - [Ben](https://github.com/BenjaminNeustadt)
@@ -56,5 +63,3 @@ Enter `psql` \
 Create the test database using `CREATE DATABASE makers_bnb_test;` \
 Connect to the database using `\c makers_bnb_test;` \
 Run the commands in the db/migrations folder, in order.
-
-
