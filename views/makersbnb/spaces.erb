@@ -23,17 +23,19 @@
 <div id='form-container'>
 <ul style="list-style: none;" id="space-list">
   <% @spaces.each do |space| %>
-     <li>Name: <%= space.name %>, </li>
-     <li>Description: <%= space.description %>, </li>
-     <li>Price: <%= space.price %></li><br>
-     <form action="/makersbnb/requests" method="get">
-  <button type="submit" name="requests">Request to Book </button>
-</form>
+     <li>Name: <%= space[0] %>, </li>
+     <li>Description: <%= space[1] %>, </li>
+     <li>Price: <%= space[2] %></li><br>
+      <form action="/makersbnb/requests" method="get">
+        <button type="submit" name="requests"> Request to Book </button>
+      </form>
   <% end %>
 <ul>
+
 </div>
 
 </section>
 
 
 </body>
+
