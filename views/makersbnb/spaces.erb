@@ -8,8 +8,9 @@
   <% @spaces.each do |space| %>
      <li>Name: <%= space[0] %>, </li>
      <li>Description: <%= space[1] %>, </li>
-     <form action="/makersbnb/requests" method="get">
-      <input type="submit" name="requests" value="Request to Book"/>
-    </form>
+     <li>Price: <%= space[2] %></li><br>
+      <form action="/makersbnb/requests" method="get">
+        <button type="submit" name="requests"> Request to Book </button>
+      </form>
   <% end %>
 <ul>
