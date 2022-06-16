@@ -1,12 +1,15 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require_relative './lib/space.rb'
+require_relative './lib/database_connection_setup'
+require_relative './lib/database_connection'
 
 class MakersBNB < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
   enable :sessions
+  DatabaseConnection.setup('makers_bnb')
 
   get '/makersbnb' do    
     erb :'/makersbnb/index'
