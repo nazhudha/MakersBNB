@@ -6,11 +6,12 @@
 * Created a new branch db_integration
 
 # Group Collabrators 
-* Naz
-* Kay
-* Aisha
-* Amir
-* Ben
+
+- [Ben](https://github.com/BenjaminNeustadt)
+- [Kay](https://github.com/kaykakaraka)
+- [Aisha](https://github.com/Aisha-Yusuff)
+- [Amir](https://github.com/ak2022dev)
+- [Naz H](https://github.com/nazhudha)
 
 # Headline specifications
 
@@ -30,7 +31,9 @@ Iteration 1: MPV - Spaces and dates are hardcoded
 ### USER STORIES
 
 * [MVP1]
-`As a renter\ So that I can choose a place to stay\ I need to see available spaces with a name, description and price.`
+`As a renter`\ 
+`So that I can choose a place to stay` \ 
+`I need to see available spaces with a name, description and price.`
 
 TDD steps: 
 
