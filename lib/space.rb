@@ -42,6 +42,7 @@ class Space
     end
   end
 
+  # method below needed as otherwise the SQL does not process any apostrophes
   def self.double_apostrophe(description)
     chars = description.chars
     new_chars = []
