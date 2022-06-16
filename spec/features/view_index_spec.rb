@@ -1,4 +1,4 @@
-feature "Viewing spaces" do
+feature "Viewing the homepage" do
   scenario "Returns a known message showing connection established" do
     visit('/makersbnb')
     expect(page).to have_content('Welcome to MakersBNB') 

@@ -1,8 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
-require_relative './lib/space.rb'
 require_relative './lib/database_connection_setup'
 require_relative './lib/database_connection'
+require_relative './lib/space'
 
 class MakersBNB < Sinatra::Base
   configure :development do
@@ -18,6 +18,20 @@ class MakersBNB < Sinatra::Base
   get '/makersbnb/spaces' do
     @spaces = Space.all
     erb :'/makersbnb/spaces'
+  end
+
+  get '/makersbnb/add' do
+    erb(:'makersbnb/add')
+  end
+
+  post '/makersbnb/add' do
+    Space.add(params[:Name], params[:Description])
+    redirect ('/makersbnb/add_confirmation')
+  end
+
+  get '/makersbnb/add_confirmation' do
+    @space = Space.show_most_recent_space
+    erb(:'makersbnb/add_confirmation')
   end
 
   get '/makersbnb/requests' do 
