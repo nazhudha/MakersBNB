@@ -17,6 +17,20 @@ class MakersBNB < Sinatra::Base
     erb :'/makersbnb/spaces'
   end
 
+  get '/makersbnb/add' do
+    erb(:'makersbnb/add')
+  end
+
+  post '/makersbnb/add' do
+    Space.add(params[:Name], params[:Description])
+    redirect ('/makersbnb/add_confirmation')
+  end
+
+  get '/makersbnb/add_confirmation' do
+    @space = Space.show_most_recent_space
+    erb(:'makersbnb/add_confirmation')
+  end
+
   get '/makersbnb/requests' do 
     erb :'/makersbnb/requests'
   end 
