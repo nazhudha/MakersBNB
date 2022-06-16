@@ -1,6 +1,54 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/kaydent/Projects/CORRECT-MakersBNB/MakersBNB/spec/features/Menus/using_the_menu_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/kaydent/Projects/CORRECT-MakersBNB/MakersBNB/spec/features/add_space_spec.rb": {
         "lines": [
           1,
@@ -88,9 +136,22 @@
           1,
           1,
           1,
+          null,
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -122,7 +183,6 @@
           null,
           null,
           null,
-          null,
           null
         ]
       },
@@ -151,6 +211,6 @@
         ]
       }
     },
-    "timestamp": 1655370208
+    "timestamp": 1655383971
   }
 }
