@@ -1,6 +1,24 @@
-<!-- in index.erb -->
-<a href="/makersbnb/spaces">Spaces </a>
-<a href="/makersbnb/requests">Requests </a>
+<!DOCTYPE html>
+<head> 
+  <link href="<%= url('/index.css') %>" rel="stylesheet" type="text/css" />
+</head>
 
-<h1>Welcome to MakersBNB</h1>
-<h3>The place to rent properties</h3>
+<body>
+  <section class="hero-section">
+    <nav>
+      <ul>
+        <li><a href="/makersbnb/spaces">Spaces </a></li>
+        <li><a href="/makersbnb/requests">Requests </a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-area">
+      <div class="hero-text">
+        <h1>Welcome to MakersBNB</h1>
+        <p>The ONLY place to rent properties</p>
+      </div>
+    </div>
+  
+  </section>
+
+</body>
