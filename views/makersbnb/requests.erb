@@ -1,13 +1,23 @@
+<!DOCTYPE html>
+<head> 
+  <link href="<%= url('/index.css') %>" rel="stylesheet" type="text/css" />
+</head>
 
-<a href="/makersbnb">Home</a>
-<a href="/makersbnb/spaces">Spaces </a>
-
-
-<h1>My Requests</h1>
-<h3>Your booking request is now confirmed</h3><br>
+<body>
+  <section class="hero-section">
+    <nav>
+      <ul>
+        <li><a href="/makersbnb">Home</a></li>
+         <li><a href="/makersbnb/spaces">Spaces </a></li>
+        <li><a href="/makersbnb/requests">Requests </a></li>
+      </ul>
+    </nav>  
+<div>
+    <p>My Requests</p>
+<p>Your booking request is now confirmed</p><br>
 
 <% if @approved_message %>
-<h3> <%= @approved_message %></h3>
+<p3> <%= @approved_message %></p3>
 <% end %>
 
 <%# <form action="/" method="get">
@@ -17,3 +27,8 @@
 <form action="/makersbnb/requests" method="post">
 <button type="submit" name="ok">Ok</button>
 </form>
+</div>
+</section>
+
+
+</body>

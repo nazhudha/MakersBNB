@@ -4,10 +4,11 @@
 </head>
 
 <body>
-  <section class="hero-section">
+  <section class="hero-section" id="main">
     <nav>
       <ul>
-        <li><a href="/makersbnb/spaces">Spaces </a></li>
+        <li><a href="/makersbnb">Home</a></li>
+         <li><a href="/makersbnb/spaces">Spaces </a></li>
         <li><a href="/makersbnb/requests">Requests </a></li>
       </ul>
     </nav>
@@ -16,9 +17,19 @@
       <div class="hero-text">
         <h1>Welcome to MakersBNB</h1>
         <p>The ONLY place to rent properties</p>
+         <div id='login-signup-container'>
+      <form action="/login" method="get">
+        <input  type="submit" value="Login" id='login-btn'>
+      </form>
+      <form action="/sign_up" method="get">
+        <input type="submit" value="Sign Up" id='signup-btn'>
+      </form>
       </div>
+      </div>
+      
     </div>
   
   </section>
+
 
 </body>

@@ -3,13 +3,12 @@ body {
 }
 
 section {
-  background-color: white;
+  /* background-color: white; */
 }
 
 .hero-section {
   height: 100vh;
   /* background-color: #1c1d25; */
-  color: white;
   font-size: 40px;
   /* background-image: url('../src/images/background.jpg');
   background-repeat: no-repeat;    
@@ -17,7 +16,7 @@ section {
   background-position: center; */
 }
 
-li a,  a {
+.hero-section li a,  a {
   text-decoration: none ;
   color: white;
 }
@@ -45,7 +44,7 @@ nav {
   top: 10px;
 }
 
-ul {
+.hero-section ul {
   display: flex;
   list-style-type: none;
   width: 500px;
@@ -57,11 +56,40 @@ ul {
   top: -8px;
 }
 
-ul li {
+ ul li {
   border-radius: 100px;
 }
 
-
+/* buttons */
+#login-signup-container {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+}
+#login-btn { 
+  width: 150px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: #white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-top: 5px;
+  margin-top: 20px;
+}
+#signup-btn {
+  width: 150px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: #white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-top: 5px;
+  margin-top: 20px;
+}
 
 .hero-area {
   display: flex;
