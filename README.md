@@ -27,6 +27,16 @@
 * Nights for which a space has already been booked should not be available for users to book that space.
 * Until a user has confirmed a booking request, that space can still be booked for that night.
 
+# Design
+
+## Class Responsibility Collaboration Cards
+
+![Class Responsibility Collaboration Cards](./assets/crc_cards.png)
+
+## Data Design
+
+![Data Design](./assets/data_model.png)
+
 # Screen Shots
 ![Main Page](./assets/main_page.png) 
 ![Add Spaces Page](./assets/add_spaces.png)
