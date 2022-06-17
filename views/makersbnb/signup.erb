@@ -1,3 +1,26 @@
+<!DOCTYPE html>
+<head> 
+  <link href="<%= url('/index.css') %>" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <section class="hero-section">
+    <nav>
+      <ul>
+        <%# <li><a href="/makersbnb">Home</a></li>
+        <li><a href="/makersbnb/spaces">Spaces </a></li>
+        <li><a href="/makersbnb/requests">Requests </a></li>
+        <li><a href="/makersbnb/add">Add Space</a></li> %>
+      </ul>
+    </nav>  
+
+<div class="title-container">
+<h2>Sign up </h2>
+</div>
+
+<%# 'Name: Happy House, Description: A really cosy space, where you can relax, Price: 24$/night' %>
+
+<div id='form-container'>
 <form action='/makersbnb/signup' method='post'>
 <label for="name">Name:</label>
 <input type="text" id="name" name="name" placeholder="John Doe"><br>
@@ -13,3 +36,11 @@
 
 <button type="submit" class="submit" name="Sign Up">Sign Up</button>
 </form>
+
+</div>
+
+</section>
+
+
+</body>
+
