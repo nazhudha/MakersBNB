@@ -16,7 +16,7 @@ class Space
     spaces = spaces.map { |row| row.values_at('name', 'description', 'price_per_night')}
     spaces.each do |space|
       if space[2] != nil
-      space[2] = Space.change_to_pounds(space[2])
+        space[2] = Space.change_to_pounds(space[2])
       end
     end
   end
