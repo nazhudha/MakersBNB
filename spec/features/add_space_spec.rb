@@ -13,7 +13,7 @@ feature 'add a space' do
     fill_in 'Description', with: "It's pretty rocky!"
     fill_in 'Price', with: '500'
     click_on 'Submit'
-    expect(page).to have_content 'Here is a confirmation of your new space details:'
+    expect(page).to have_content 'Here are the confirmation details for your new space:'
     expect(page).to have_content 'Name: The Moon'
     expect(page).to have_content "Description: It's pretty rocky!"
     expect(page).to have_content "Price: £500.00"
@@ -25,7 +25,7 @@ feature 'add a space' do
     fill_in 'Description', with: "This place is very fancy"
     fill_in 'Price', with: '4000'
     click_on 'Submit'
-    expect(page).to have_content 'Here is a confirmation of your new space details:'
+    expect(page).to have_content 'Here are the confirmation details for your new space:'
     expect(page).to have_content 'Name: Buckingham Palace'
     expect(page).to have_content 'Description: This place is very fancy'
     expect(page).to have_content "Price: £4,000.00"
@@ -40,7 +40,7 @@ feature 'add a space' do
     fill_in 'Description', with: "It's pretty rocky!"
     fill_in 'Price', with: '400'
     click_on 'Submit'
-    expect(page).to have_content 'Here is a confirmation of your new space details:'
+    expect(page).to have_content 'Here are the confirmation details for your new space:'
     expect(page).not_to have_content 'Name: Buckingham Palace'
     expect(page).to have_content 'Name: The Moon'
     expect(page).to have_content "Description: It's pretty rocky!"

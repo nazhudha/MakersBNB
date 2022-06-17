@@ -16,17 +16,22 @@
 <div>
 
 <div class="title-container">
-<h2>Here is a confirmation of your new space details:</h2>
+<h2>Here are the confirmation details for your new space:</h2>
 </div>
 
-<div id='form-container' >
-  Name: <%=@space[0]%> <br>
-  Description: <%=@space[1]%><br>
-  Price: <%=@space[2]%>
-  <a href="/makersbnb/add" id="another-space-link">Add another space</a>
+<div id='form-container'>
+<ul style="display: inline-block; float: center;" id="space-list">
+  <li>Name: <%=@space[0]%></li>
+  <li>Description: <%=@space[1]%></li>
+  <li>Price: <%=@space[2]%></li>
+  <form action="/makersbnb/add" method="get">
+  <button type="submit" name="Add another space">Add another space</button>
+</form>
+  <%# <li><a href="/makersbnb/add" id="another-space-link">Add another space</a></li> %>
 <form action="/makersbnb/spaces" method="get">
   <button type="submit" name="requests"> View all spaces </button>
 </form>
+</ul>
 </div>
 </section>
 </body>
