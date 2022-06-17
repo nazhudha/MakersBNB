@@ -9,8 +9,9 @@
     <nav>
       <ul>
         <li><a href="/makersbnb">Home</a></li>
-         <li><a href="/makersbnb/spaces">Spaces </a></li>
+        <li><a href="/makersbnb/spaces">Spaces </a></li>
         <li><a href="/makersbnb/requests">Requests </a></li>
+        <li><a href="/makersbnb/add">Add Space</a></li>
       </ul>
     </nav>  
 <div>
@@ -19,20 +20,16 @@
 <h2>My Requests</h2>
 </div>
 
-<div id='form-container' >
-<p>Your booking request is now confirmed</p><br>
-
+<div id='form-container'>
+<ul style="list-style: none; display: inline-block; float: center;">
+<li>Your booking request is now confirmed</><br><br>
 <% if @approved_message %>
-<p> <%= @approved_message %></p>
+<li> <%= @approved_message %></li><br>
 <% end %>
-
-<%# <form action="/" method="get">
-<button type="submit" name="ok">Ok</button>
-</form> %>
-
 <form action="/makersbnb/requests" method="post">
 <button type="submit" name="ok">Ok</button>
 </form>
+</ul>
 </div>
 
 </section>

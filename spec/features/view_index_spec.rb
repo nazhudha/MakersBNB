@@ -5,3 +5,4 @@ feature "Viewing the homepage" do
     expect(page).to have_content('The ONLY place to rent properties')
   end
 end
+ 

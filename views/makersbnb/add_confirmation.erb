@@ -1,9 +1,33 @@
-Here is a confirmation of your new space details: <br>
-Name: <%=@space[0]%> <br>
-Description: <%=@space[1]%>
-Price: <%=@space[2]%>
-<a href="/makersbnb/add">Add another space</a>
+<!DOCTYPE html>
+<head> 
+  <link href="<%= url('/index.css') %>" rel="stylesheet" type="text/css" />
+</head>
 
+<body>
+  <section class="hero-section">
+    <nav>
+      <ul>
+        <li><a href="/makersbnb">Home</a></li>
+        <li><a href="/makersbnb/spaces">Spaces</a></li>
+        <li><a href="/makersbnb/requests">Requests </a></li>
+        <li><a href="/makersbnb/add">Add_Space </a></li>
+      </ul>
+    </nav>  
+<div>
+
+<div class="title-container">
+<h2>Here is a confirmation of your new space details:</h2>
+</div>
+
+<div id='form-container' >
+  Name: <%=@space[0]%> <br>
+  Description: <%=@space[1]%><br>
+  Price: <%=@space[2]%>
+  <a href="/makersbnb/add" id="another-space-link">Add another space</a>
 <form action="/makersbnb/spaces" method="get">
-  <button type="submit" name="requests"> view all spaces </button>
+  <button type="submit" name="requests"> View all spaces </button>
 </form>
+</div>
+</section>
+</body>
+

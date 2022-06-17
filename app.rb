@@ -47,6 +47,25 @@ class MakersBNB < Sinatra::Base
     @approved_message = session[:approved_message]
     erb :'makersbnb/requests'
   end
+
+  get '/makersbnb/signup' do 
+    erb :'makersbnb/signup'
+  end 
   
+  post '/makersbnb/signup' do 
+    # @user = User.new(name: params["name"], username: params["username"], email: params["email"], password: params["password"])
+    session[:name] = params[:name]
+    session[:username] = params[:username]
+    session[:email] = params[:email]
+    session[:password] = params[:password]
+    redirect '/makersbnb/member'
+  end 
+  
+  get '/makersbnb/member' do  
+    @name = session[:name]
+    # p @name
+    erb :'/makersbnb/users/index'
+  end
+
   run! if app_file == $0
 end
