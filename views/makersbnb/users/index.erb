@@ -16,28 +16,18 @@
 
     <div class="hero-area">
       <div class="hero-text">
-        <h1>Welcome <%= @name %> to MakersBNB</h1>
-        <p>The ONLY place to rent properties</p>
-
-         <div id='login-signup-container'>
-      <%# <form action="/login" method="get">
-        <input class="button" type="submit" value="Login" name="Login" id='login-btn'>
-      </form>
-      <form action="/makersbnb/signup" method="get">
-        <input class="button" type="submit" value="Sign Up" name="Sign Up" id='signup-btn'>
-      </form> %>
-      <form action="/makersbnb/spaces" method="get">
-        <input class="button" type="submit" value="Book a space">
-      </form>
-      <form action="/makersbnb/add" method="get">
-        <input class="button" type="submit" value="Add a space">
-      </form>
-  
+        <h1>Welcome <%= @name %>!</h1>
+        <p>What would you like to do today?</p>
+        <div id='login-signup-container'>
+          <form action="/makersbnb/spaces" method="get">
+            <input class="button" type="submit" value="Book a space">
+          </form>
+          <form action="/makersbnb/add" method="get">
+            <input class="button" type="submit" value="Add a space">
+          </form>
+        </div>
       </div>
-      </div>
-      
-    </div>
-    
+   </div>
   </section>
 </body>
 
