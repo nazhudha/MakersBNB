@@ -9,7 +9,7 @@ class User
 
   def self.details
     users = DatabaseConnection.query("SELECT * FROM users;")
-    users.map {|user| user.values_at('name', 'username')}.last
+    users.map {|user| user.values_at('name', 'username', 'email')}.last
   end
 end
 
