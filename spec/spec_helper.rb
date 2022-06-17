@@ -9,12 +9,12 @@ require 'rspec'
 require 'simplecov'
 require 'simplecov-console'
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-  SimpleCov::Formatter::Console,
-  # Want a nice code coverage website? Uncomment this next line!
-  # SimpleCov::Formatter::HTMLFormatter
-])
-SimpleCov.start
+# SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+#   SimpleCov::Formatter::Console,
+#   # Want a nice code coverage website? Uncomment this next line!
+#   # SimpleCov::Formatter::HTMLFormatter
+# ])
+# SimpleCov.start
 
 Capybara.app = MakersBNB
 
@@ -72,9 +72,6 @@ RSpec.configure do |config|
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
 
-if config.files_to_run.one?
-    setup_test_database
-end
 =begin
   # This allows you to limit a spec run to individual examples or groups
   # you care about by tagging them with `:focus` metadata. When nothing
