@@ -103,10 +103,12 @@ nav {
   display: flex;
   justify-content: flex-start;
   padding-top: 10px;
+  text-align: center;
 }
-#login-btn { 
+
+/* #login-btn { 
   width: 150px;
-  height: 40px;
+  height: 45px;
   border: 1px solid black;
   border-radius: 30px;
   background-color: white;
@@ -114,12 +116,13 @@ nav {
   font-size: 1.5rem;
   font-weight: 300;
   padding-top: 5px;
-  margin-top: 20px;
+  margin: 15px;
   color: black;
 }
+
 #signup-btn {
   width: 150px;
-  height: 40px;
+  height: 45px;
   border: 1px solid black;
   border-radius: 30px;
   background-color: white;
@@ -127,9 +130,9 @@ nav {
   font-size: 1.5rem;
   font-weight: 300;
   padding-top: 5px;
-  margin-top: 20px;
+  margin: 15px;
   color: black;
-}
+} */
 
 
 /* SPACES AND REQUESTS PAGES ---------->>>>>>>>>>> */
@@ -159,27 +162,29 @@ nav {
 }
 
 .button {
-  width: 150px;
-  height: 40px;
+  width: 170px;
+  height: 45px;
+  border: 1px solid black;
   border-radius: 30px;
-  background-color: #DF7241;
+  background-color: white;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 300;
   padding-top: 5px;
-  margin-top: 20px;
+  margin: 15px;
+  color: black;
 }
 
 .button:hover, .socials svg:hover, nav ul li:hover{
-  /* background-color: #f0774e; */
+  background-color: #FFFFFF;
   cursor: pointer;
   border-color: #F9F871;
-  color: white;
+  color: #f0774e;
   box-shadow: 0 0.7em 1em -0.5em #F9F871;
   transform: translateY(0.1em);
 }
 
 .button:active {
-  background-color: #A9a9a9;
-  color: #808080;
+  background-color: #000000;
+  color: #FFFFFF;
 }
