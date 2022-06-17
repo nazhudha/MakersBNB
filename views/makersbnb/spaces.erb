@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <head> 
   <link href="<%= url('/index.css') %>" rel="stylesheet" type="text/css" />
+  <link href="<%= url('/spaces.css') %>" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
   <section class="hero-section">
     <nav>
       <ul>
-        <li><a href="/makersbnb">Home</a></li>
+         <li><a href="/makersbnb/member">Home</a></li>
         <li><a href="/makersbnb/spaces">Spaces </a></li>
         <li><a href="/makersbnb/requests">Requests </a></li>
         <li><a href="/makersbnb/add">Add Space</a></li>
+       <li><a href="/makersbnb">Sign Out </a></li>
       </ul>
     </nav>  
 
@@ -26,7 +28,7 @@
      <li>Description: <%= space[1] %></li>
      <li>Price: <%= space[2] %></li>
       <form action="/makersbnb/requests" method="get">
-        <button type="submit" name="requests"> Request to Book </button>
+        <button class="spaces-buttons" type="submit" name="requests"> Request to Book </button>
       </form><br>
   <% end %>
 <ul>
