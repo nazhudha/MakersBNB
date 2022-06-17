@@ -39,8 +39,9 @@
 
 # Screen Shots
 ![Main Page](./assets/main_page.png) 
+![Sign Up](./assets/sign_up.png) 
 ![Add Spaces Page](./assets/add_spaces.png)
-![Requests Page](./assets/requests_page.png)
+![Book Space ](./assets/book_space.png)
 
 
 ## ITERATIONS
