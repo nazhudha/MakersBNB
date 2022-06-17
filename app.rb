@@ -53,12 +53,20 @@ class MakersBNB < Sinatra::Base
   end 
   
   post '/makersbnb/signup' do 
+    # @user = User.new(name: params["name"], username: params["username"], email: params["email"], password: params["password"])
+    session[:name] = params[:name]
+    session[:username] = params[:username]
+    session[:email] = params[:email]
+    session[:password] = params[:password]
+    # session[:name] = @name
     redirect '/makersbnb/member'
   end 
   
-  get '/makersbnb/member' do    
-    erb :'/makersbnb/index'
+  get '/makersbnb/member' do  
+    @name = session[:name]
+    # p @name
+    erb :'/makersbnb/users/index'
   end
-  
+
   run! if app_file == $0
 end
