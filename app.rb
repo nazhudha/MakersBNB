@@ -15,6 +15,10 @@ class MakersBNB < Sinatra::Base
     erb :'/makersbnb/index'
   end
 
+  get '/makersbnb/login' do
+    erb :'/makersbnb/login'
+  end
+
   get '/makersbnb/spaces' do
     @spaces = Space.all
     erb :'/makersbnb/spaces'
