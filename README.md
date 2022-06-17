@@ -28,7 +28,7 @@
 * Until a user has confirmed a booking request, that space can still be booked for that night.
 
 # Screen Shots
-![Main Page](./assets/main_page.png)
+![Main Page](./assets/main_page.png) 
 ![Add Spaces Page](./assets/add_spaces.png)
 ![Requests Page](./assets/requests_page.png)
 

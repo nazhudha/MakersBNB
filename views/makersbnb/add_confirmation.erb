@@ -21,14 +21,13 @@
 
 <div id='form-container' >
   Name: <%=@space[0]%> <br>
-  Description: <%=@space[1]%>
-  <a style="color: green;" href="/makersbnb/add">Add another space</a>
+  Description: <%=@space[1]%><br>
+  Price: <%=@space[2]%>
+  <a href="/makersbnb/add" id="another-space-link">Add another space</a>
 <form action="/makersbnb/spaces" method="get">
-  <button type="submit" name="requests"> view all spaces </button>
+  <button type="submit" name="requests"> View all spaces </button>
 </form>
 </div>
-
 </section>
-
-
 </body>
+

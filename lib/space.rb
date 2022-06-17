@@ -14,18 +14,27 @@ class Space
 
   def self.all
     spaces = DatabaseConnection.query("SELECT * FROM spaces")
-    spaces.map { |row| row.values_at('name', 'description', 'price_per_night')}
+    spaces = spaces.map { |row| row.values_at('name', 'description', 'price_per_night')}
+    spaces.each do |space|
+      if space.length > 2
+      space[2] = Space.change_to_pounds(space[2])
+      end
+    end
   end
 
-  def self.add(space_name, description)
+  def self.add(space_name, description, price)
      space_name = Space.double_apostrophe(space_name)
      description = Space.double_apostrophe(description)
-     DatabaseConnection.query("INSERT INTO spaces (name, description) VALUES ('#{space_name}', '#{description}');")
+     DatabaseConnection.query("INSERT INTO spaces (name, description, price_per_night) VALUES ('#{space_name}', '#{description}',  '#{price}');")
   end
 
   def self.show_most_recent_space
-    table = DatabaseConnection.query("SELECT * FROM spaces;")
-    table.map {|row| row.values_at('name', 'description')}.last
+    spaces = DatabaseConnection.query("SELECT * FROM spaces;")
+    spaces = spaces.map {|row| row.values_at('name', 'description', 'price_per_night')}.last
+    if spaces.length > 2
+      spaces[2] = Space.change_to_pounds(spaces[2])
+    end
+    spaces
   end
 
   def self.names
@@ -42,6 +51,11 @@ class Space
       new_chars << char
     end
     new_chars.join
+  end
+
+  def self.change_to_pounds(price)
+    price[0] = '£'
+    return price
   end
 
 end
