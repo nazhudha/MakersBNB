@@ -58,7 +58,6 @@ class MakersBNB < Sinatra::Base
     session[:username] = params[:username]
     session[:email] = params[:email]
     session[:password] = params[:password]
-    # session[:name] = @name
     redirect '/makersbnb/member'
   end 
   
