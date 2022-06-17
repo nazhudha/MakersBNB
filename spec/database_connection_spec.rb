@@ -11,7 +11,7 @@ describe DatabaseConnection do
   end
 
   describe '.connection' do
-    it 'this onnection is persistent' do
+    it 'this connection is persistent' do
       connection = DatabaseConnection.setup('makers_bnb_test')
 
       expect(DatabaseConnection.connection).to eq connection

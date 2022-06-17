@@ -1,19 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/kaydent/Projects/CORRECT-MakersBNB/MakersBNB/spec/setup_test_database.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
-          2,
-          2,
-          null,
-          null
-        ]
-      },
       "/Users/kaydent/Projects/CORRECT-MakersBNB/MakersBNB/spec/user_spec.rb": {
         "lines": [
           1,
@@ -21,12 +8,12 @@
           1,
           1,
           1,
-          1,
+          0,
           null,
           null,
           1,
           1,
-          1,
+          0,
           null,
           null
         ]
@@ -34,18 +21,25 @@
       "/Users/kaydent/Projects/CORRECT-MakersBNB/MakersBNB/lib/user.rb": {
         "lines": [
           1,
+          1,
+          null,
+          1,
           null,
           1,
           2,
           null,
           null,
           1,
-          2,
+          0,
+          0,
+          null,
+          null,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1655465791
+    "timestamp": 1655468203
   }
 }
