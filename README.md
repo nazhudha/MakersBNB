@@ -1,21 +1,16 @@
 # Overview
-- Building a web app that allows users to login to an accomodation rental site
-- Users can add rental spaces, book rental spaces and reciveve confirmation of booking 
+- Building a (full stack) web app that allows users to login to an accomodation rental site - AirBnb Clone
+- Using Ruby and Ruby lib/frameworks incl. Sinatra, Capybara
+- Connecting to Database via PostgreSQL
+- Users can: Add rental spaces, book rental spaces and receive confirmation of booking 
 
-# Group Collabrators 
+# Group Collabrators (Alphabetical)
 
-- [Ben](https://github.com/BenjaminNeustadt)
-- [Kay](https://github.com/kaykakaraka)
 - [Aisha](https://github.com/Aisha-Yusuff)
 - [Amir](https://github.com/ak2022dev)
+- [Ben](https://github.com/BenjaminNeustadt)
+- [Kay](https://github.com/kaykakaraka)
 - [Naz H](https://github.com/nazhudha)
-
-# Notes/updates during development
-
-* MVP1 has been merged into main
-* feature1_book_space has been merged into MVP1
-* These are currently obsolete
-* Created a new branch db_integration
 
 # Headline specifications
 
@@ -29,27 +24,40 @@
 
 # Design
 
-## Class Responsibility Collaboration Cards
+### Class Responsibility Collaboration Cards
 
 ![Class Responsibility Collaboration Cards](./assets/crc_cards.png)
 
-## Data Design
+### Data Design
 
 ![Data Design](./assets/data_model.png)
 
 # Screen Shots
-![Main Page](./assets/main_page.png) 
-![Sign Up](./assets/sign_up.png) 
-![Add Spaces Page](./assets/add_spaces.png)
-![Book Space ](./assets/book_space.png)
+#### Before Login - Main Page
+![Main Page Before Login](./assets/main_page_presignup.png)
+ 
+#### Login/Signup Pages
+![Login and Sign Up](./assets/login_signup.png)
 
+#### After Login - Main Page
+![Main Page After Login](./assets/main_page_afterlogin.png))
+![Add Spaces Page](./assets/add_space.png)
+![My Requests Page](./assets/my_requests.png)
+![Confirmation Page](./assets/confirmation_details.png)
 
-## ITERATIONS
+# Notes/updates during development
 
-Iteration 1: MPV - Spaces and dates are hardcoded
+* MVP1 has been merged into main
+* feature1_book_space has been merged into MVP1
+* These are currently obsolete
+* Created a new branch db_integration
+
+### ITERATIONS
+
+- Iteration 1: MPV - Spaces and dates are hardcoded
 [...]
-Iteration 4: current
-Iteration 5: pending
+- Iteration 4: current
+- Iteration 5: pending
 
 ### USER STORIES
 
@@ -69,7 +77,7 @@ TDD steps:
 - MVC refactor: move the list of spaces (be it one or more) away from the views and controller, and into the model (step 1) => PASSED
   and then database (step 2).[rspec] => PENDING
 
-#### DATABASE SETUP
+# DATABASE SETUP
 
 To Set Up the Database:
 -----------------
