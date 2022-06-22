@@ -2,7 +2,7 @@
 - Building a (full stack) web app that allows users to login to an accomodation rental site - AirBnb Clone
 - Using Ruby and Ruby lib/frameworks incl. Sinatra, Capybara
 - Connecting to Database via PostgreSQL
-- Users can: Add rental spaces, book rental spaces and reciveve confirmation of booking 
+- Users can: Add rental spaces, book rental spaces and receive confirmation of booking 
 
 # Group Collabrators (Alphabetical)
 
